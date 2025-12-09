@@ -1,0 +1,56 @@
+<div style="background-color: pink;"> Div 1</div>
+
+<div style="background-color: red;" *ngIF="true"> Div 2</div>
+
+<div style="background-color: chartreuse;" *ngIF="ch"> Div 3</div>
+
+<ul *ngFor="let employees of emp">
+  <li>{{employees}}</li>
+</ul>
+
+<input type="text" #fru>
+<input type="submit" (click)="addFruit(fru.value)">
+
+<p *ngfor="let f og fruits"> 
+  {{f}}
+</p>
+
+<h2>Select a color: </h2>
+
+
+
+
+
+<select [(ngModel)]="color">
+  <option value="red">Red</option>
+  <option value="blue">Blue</option>
+  <option value="green">Green</option>
+</select>
+
+<div [ngSwitch]="color" style="margin-top:20px; padding:10px; border:1px solid gray">
+  <p *ngSwitchCase="'red'" style="color:red;">❤️ You selected RED!</p>
+  <p *ngSwitchCase="'blue'" style="color:blue;">💙 You selected BLUE!</p>
+  <p *ngSwitchCase="'green'" style="color:green;">💚 You selected GREEN!</p>
+  <p *ngSwitchDefault>Please select a color.</p>
+</div>
+
+<br><br>
+
+
+
+
+
+<div class="container">
+  <select [(ngModel)]="role">
+    <option value="admin">Admin</option>
+    <option value="manager">Manager</option>
+    <option value="user">User</option>
+  </select>
+
+  <div [ngSwitch]="role" style="margin-top:20px; padding:10px; border:1px solid gray">
+    <p *ngSwitchCase="'admin'">👑 You are an Admin – Full Access!</p>
+    <p *ngSwitchCase="'manager'">🛠 You are a Manager – Limited Access!</p>
+    <p *ngSwitchCase="'user'">👤 You are a User – Basic Access!</p>
+    <p *ngSwitchDefault>❓ Please select a role</p>
+  </div>
+</div>

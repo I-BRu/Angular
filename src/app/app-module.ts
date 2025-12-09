@@ -10,6 +10,7 @@ import { Dashboard } from './dashboard/dashboard';
 import { Xyz } from './xyz/xyz';
 import { Databinding } from './databinding/databinding';
 import { FormsModule } from '@angular/forms';
+import { Directivedemo } from './directivedemo/directivedemo';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FormsModule } from '@angular/forms';
     Signin,
     Dashboard,
     Xyz,
-    Databinding
+    Databinding,
+    Directivedemo
   ],
   imports: [
     BrowserModule,

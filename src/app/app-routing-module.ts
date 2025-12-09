@@ -5,6 +5,7 @@ import { Home } from './home/home';
 import { Login } from './login/login';
 import { Signin } from './signin/signin';
 import { Databinding } from './databinding/databinding';
+import { Directivedemo } from './directivedemo/directivedemo';
 
 const routes: Routes = [
   { path: 'home', component: Home },
@@ -12,7 +13,8 @@ const routes: Routes = [
   { path: 'login', component: Login },
   { path: 'signin', component: Signin },
   { path: 'logout', component: Login },
-  { path: 'databind', component: Databinding }
+  { path: 'databind', component: Databinding },
+  { path: 'directive', component: Directivedemo }
 ];
 
 @NgModule({
