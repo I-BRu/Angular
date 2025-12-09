@@ -3,14 +3,28 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
+import { Home } from './home/home';
+import { Login } from './login/login';
+import { Signin } from './signin/signin';
+import { Dashboard } from './dashboard/dashboard';
+import { Xyz } from './xyz/xyz';
+import { Databinding } from './databinding/databinding';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    App
+    App,
+    Home,
+    Login,
+    Signin,
+    Dashboard,
+    Xyz,
+    Databinding
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [
     provideBrowserGlobalErrorListeners()

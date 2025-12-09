@@ -1,0 +1,44 @@
+<p>databinding works!</p>
+
+<div>
+  <h2>Data Binding Demo</h2>
+
+  <!-- demo name update -->
+  <input type="submit" value="abc" (click)="abc()" class="btn btn-success"> <br><br>
+
+  <input type="text" #uname  [(ngModel)] = "myname">
+  <input type="submit" value="xyz" (click)="xyz(uname.value)" class="btn btn-success"><br>
+  <p>My name is : {{ myname }}</p>
+
+  <div>
+    <h3>
+      Principle :
+      <input type="text" #p> <br><br>
+
+      Time :
+      <input type="text" #t> <br><br>
+
+      Rate of Int :
+      <input type="text" #r [value]="roi" disabled><br><br>
+
+     
+      <select (change)="loneType($event)">
+        <option value="">Select Loan</option>
+        <option value="home">Home</option>
+        <option value="edu">Edu</option>
+        <option value="personal">Personal</option>
+        <option value="gold">Gold</option>
+      </select>
+      <br><br>
+
+      Total :
+      <input type="text" [value]="total"><br><br>
+
+      EMI :
+      <input type="text" [value]="emi"><br><br>
+
+      <input type="submit" value="Calculate"
+        (click)="cal(p.value, t.value, r.value)">
+    </h3>
+  </div>
+</div>
